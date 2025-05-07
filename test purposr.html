@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spoken English Academy</title>
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Font Awesome (for social media icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-SomeHash" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    body {
+      background: linear-gradient(to right, #f7f9fc, #e4f1fe);
+      font-family: 'Arial', sans-serif;
+    }
+
+    .skill-card {
+      position: relative;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(168, 85, 247, 0.3);
+      opacity: 0.9;
+      transform: translateY(0);
+      border: 2px solid transparent;
+      transition: all 0.3s ease-in-out;
+      width: 300px;
+      margin-bottom: 20px;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 18px 35px rgba(168, 85, 247, 0.5);
+      opacity: 0.95;
+      border: 2px solid #6a1b9a;
+    }
+
+    .glass-card {
+      backdrop-filter: blur(15px);
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4);
+      opacity: 0.9;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #f8b8d8, #c8a0f0);
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      background: linear-gradient(to right, #6a1b9a, #d500f9);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .btn-start {
+      padding: 12px 24px;
+      background: linear-gradient(to right, #6a1b9a, #d500f9);
+  
+      font-weight: 700;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+      transition: all 0.3s ease;
+      color: white;
+    }
+
+    .btn-start:hover {
+      transform: scale(1.1);
+      background: linear-gradient(to right, #d500f9, #6a1b9a);
+      box-shadow: 0 8px 20px rgba(168, 85, 247, 0.6);
+    }
+
+    .hidden-content {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .skill-card:hover .hidden-content {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Footer Styling */
+    footer {
+      background: #6a1b9a;
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+      opacity: 0.8;
+      transition: opacity 0.4s ease;
+    }
+
+    footer:hover {
+      opacity: 1;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 1rem;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      text-decoration: none;
+      color: white;
+      transition: transform 0.3s ease;
+    }
+
+    .social-link i {
+      margin-right: 10px;
+      font-size: 24px;
+    }
+
+    .social-link:hover {
+      transform: scale(1.1);
+      color: #ffd700;
+    }
+
+    @media (max-width: 768px) {
+      .skill-card {
+        width: 250px;
+      }
+
+      .section-content {
+        padding: 2rem;
+      }
+
+      .social-links {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 class="text-5xl font-extrabold mb-4">Achieve Your Goals in English</h1>
+    <p class="text-lg mb-6">
+      Start mastering English with bite-sized lessons that enhance your vocabulary and fluency—perfect for both life and work.
+    </p>
+    <a href="#skills" class="btn-start">Start Now</a>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section-content text-center">
+    <h2 class="text-3xl font-semibold text-purple-800 mb-8">Skills You Will Master</h2>
+    <div class="flex flex-wrap justify-center gap-8">
+      <!-- Reading -->
+      <div class="glass-card skill-card">
+        <div class="font-bold text-indigo-700 text-2xl text-center font-serif">Reading</div>
+        <div class="hidden-content mt-3 text-sm leading-relaxed text-gray-700 font-[Georgia]">
+          <ol class="list-decimal pl-5">
+            <li class="mb-2">Focus on the context to understand the meaning naturally.</li>
+            <li class="mb-2">Highlight and learn essential vocabulary in each passage.</li>
+            <li class="mb-2">Read aloud regularly to improve clarity and pronunciation.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Speaking -->
+      <div class="glass-card skill-card">
+        <div class="font-bold text-pink-700 text-2xl text-center font-serif">Speaking</div>
+        <div class="hidden-content mt-3 text-sm leading-relaxed text-gray-700 font-[Georgia]">
+          <ol class="list-decimal pl-5">
+            <li class="mb-2">Engage in regular practice with a partner or group setting.</li>
+            <li class="mb-2">Prioritize fluency over perfection in early stages of learning.</li>
+            <li class="mb-2">Record your speech to evaluate tone, clarity, and improvement areas.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Listening -->
+      <div class="glass-card skill-card">
+        <div class="font-bold text-indigo-700 text-2xl text-center font-serif">Listening</div>
+        <div class="hidden-content mt-3 text-sm leading-relaxed text-gray-700 font-[Georgia]">
+          <ol class="list-decimal pl-5">
+            <li class="mb-2">Listen to a variety of content—podcasts, videos, interviews, and talks.</li>
+            <li class="mb-2">Pay attention to tone, emotion, and the main message being conveyed.</li>
+            <li class="mb-2">Use subtitles for support at first, then try without them to boost focus.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Writing -->
+      <div class="glass-card skill-card">
+        <div class="font-bold text-pink-700 text-2xl text-center font-serif">Writing</div>
+        <div class="hidden-content mt-3 text-sm leading-relaxed text-gray-700 font-[Georgia]">
+          <ol class="list-decimal pl-5">
+            <li class="mb-2">Start by writing short, simple paragraphs to express your thoughts.</li>
+            <li class="mb-2">Ensure clarity, use proper punctuation, and focus on grammar.</li>
+            <li class="mb-2">Incorporate rich vocabulary to make your writing more vivid and expressive.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <!-- Footer Section -->
+<footer class="bg-purple-800 text-white py-8 text-center relative">
+  <p class="text-xl font-semibold mb-4">Stay Connected</p>
+  <div class="flex justify-center items-center gap-6 flex-wrap">
+    <!-- Facebook -->
+    <a href="#" class="group transform transition duration-300 hover:scale-110">
+      <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-blue-600 transition duration-300">
+        <i class="fab fa-facebook-f text-purple-800 group-hover:text-white text-xl"></i>
+      </div>
+    </a>
+    <!-- Twitter -->
+    <a href="#" class="group transform transition duration-300 hover:scale-110">
+      <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-blue-400 transition duration-300">
+        <i class="fab fa-x-twitter text-purple-800 group-hover:text-white text-xl"></i>
+      </div>
+    </a>
+    <!-- Instagram -->
+    <a href="#" class="group transform transition duration-300 hover:scale-110">
+      <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-pink-500 transition duration-300">
+        <i class="fab fa-instagram text-purple-800 group-hover:text-white text-xl"></i>
+      </div>
+    </a>
+    <!-- YouTube -->
+    <a href="#" class="group transform transition duration-300 hover:scale-110">
+      <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-red-600 transition duration-300">
+        <i class="fab fa-youtube text-purple-800 group-hover:text-white text-xl"></i>
+      </div>
+    </a>
+  </div>
+  <p class="mt-6 text-sm">&copy; 2025 Spoken English Academy. All rights reserved.</p>
+</footer>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const skillCards = document.querySelectorAll('.skill-card');
+      skillCards.forEach((card, index) => {
+        setTimeout(() => {
+          card.classList.add('visible');
+        }, index * 200);
+      });
+    });
+  </script>
+</body>
+</html>
